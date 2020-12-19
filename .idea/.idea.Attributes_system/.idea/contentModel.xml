@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\eskem\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\eskem\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_Attributes_system.-2127440294.00" t="ExcludeRecursive" />
+    <e p="D:\Work\Tutorials\Attributes_system" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Scripts" t="Include">
+          <e p="Controllers" t="Include">
+            <e p="EntityController.cs" t="Include" />
+            <e p="GameController.cs" t="Include" />
+            <e p="PlayerImprovedController.cs" t="Include" />
+          </e>
+          <e p="Data" t="Include">
+            <e p="Attribute" t="Include">
+              <e p="AttackAttr.cs" t="Include" />
+              <e p="BaseAttribute.cs" t="Include" />
+              <e p="DefenseAttr.cs" t="Include" />
+              <e p="HealthAttr.cs" t="Include" />
+              <e p="MovementSpeedAttr.cs" t="Include" />
+              <e p="RotationAttr.cs" t="Include" />
+            </e>
+            <e p="EntityData.cs" t="Include" />
+            <e p="Modifier.cs" t="Include" />
+          </e>
+          <e p="GameEnums.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Attributes_system.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
