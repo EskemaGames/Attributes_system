@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using UnityEditor;
 
 
 namespace example.attributes
@@ -10,18 +9,63 @@ namespace example.attributes
     {
         //assign a number for enemies or players
         public uint CharacterId { get; private set; }
-        public string id;
-        public string name;
+        public string Id{ get; private set; }
+        public string PortraitName{ get; private set; }
+        public string ClassName{ get; private set; }
+        private List<BaseAttribute> _attributes = new List<BaseAttribute>();
+        private List<Modifier> _modifiers = new List<Modifier>();
 
-        List<BaseAttribute> _attributes = new List<BaseAttribute>();
-        List<Modifier> _modifiers = new List<Modifier>();
+        
+        
+        #region constructor
 
+        public EntityData() { }
 
-        public void Init(uint charId, List<BaseAttribute> attributes)
+        public EntityData(
+            uint characterid,
+            string id,
+            string name,
+            string classname,
+            List<BaseAttribute> attributes)
         {
-            CharacterId = charId;
-            _attributes = attributes;
+            CharacterId = characterid;
+            Id = id;
+            PortraitName = name;
+            ClassName = classname;
+            attributes = new List<BaseAttribute>(attributes);
         }
+        
+        public EntityData(EntityData data)
+        {
+            CharacterId = data.CharacterId;
+            Id = data.Id;
+            PortraitName = data.PortraitName;
+            ClassName = data.ClassName;
+            _attributes = data._attributes;
+            _modifiers = data._modifiers;
+        }
+        
+        public EntityData Clone()
+        {
+            return new EntityData(this);
+        }
+        
+        #endregion
+
+        
+        
+        // public void Init(uint characterid,
+        //     string id,
+        //     string name,
+        //     string classname, 
+        //     List<BaseAttribute> attributes)
+        // {
+        //     CharacterId = characterid;
+        //     Id = id;
+        //     PortraitName = name;
+        //     ClassName = classname;
+        //     _attributes = new List<BaseAttribute>(attributes);
+        // }
 
 
         public void Destroy()
@@ -180,8 +224,7 @@ namespace example.attributes
                     }
                 }
             }
-
-
+            
             if (canAdd)
             {
                 _modifiers.Add(modifier);

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 using example.attributes;
 
@@ -27,14 +28,13 @@ public class EntityController : MonoBehaviour {
         Rotate();
     }
 
-    
-    
-    
-    
-    
-    
-    
-    
+
+    public void StartAttack()
+    {
+        Attack(null);
+    }
+
+
     private void Movement()
     {
         BaseAttribute attr = entityData.GetAttribute<MovementSpeedAttr>();
@@ -66,9 +66,10 @@ public class EntityController : MonoBehaviour {
     
     public void Attack(GameObject target)
     {
+        Debug.Log("atk");
         BaseAttribute attack = entityData.GetAttribute<AttackAttr>();
 
-        if (attack == null) return;
+        if (attack == null) {Debug.Log("null");return;}
         
         //do something to attack
         //target.GetComponent<ITarget>().GotHit(attack.Value);

@@ -10,8 +10,9 @@
         public GameEnums.Modifier Modifier { get; private set; }
 
         public string Name { get { return GetType().Name; } }
+        
 
-
+        
         #region constructor
 
         public BaseAttribute() { }
